@@ -1,10 +1,10 @@
 import * as React from "react";
 import { View, Text } from "react-native";
 
-export default function Home({ navigation }) {
+export default function Reports({ navigation }) {
   return (
     <View>
-      <Text> Home Screen</Text>
+      <Text> Report Screen</Text>
     </View>
   );
 }
