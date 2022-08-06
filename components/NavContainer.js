@@ -1,7 +1,6 @@
 import * as React from "react";
 import { View, Text, StyleSheet } from "react-native";
-//import { NavigationContainer } from "react-navigation";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -9,7 +8,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import Donate from "./Donate";
 import FAQ from "./FAQ";
 import Home from "./Home";
-import Reports from "./Reports";
+import { ReportStack } from "./StackNav";
 
 //ScreenNames
 const homeName = "Home";
@@ -46,7 +45,7 @@ export default function NavContainer() {
       >
         <Tab.Screen name={homeName} component={Home} />
         <Tab.Screen name={FAQName} component={FAQ} />
-        <Tab.Screen name={ReportName} component={Reports} />
+        <Tab.Screen name={ReportName} component={ReportStack} />
         <Tab.Screen name={DonateName} component={Donate} />
       </Tab.Navigator>
     </NavigationContainer>
