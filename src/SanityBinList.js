@@ -1,9 +1,8 @@
-import react from "react";
 import {addSanitaryBin, getSanitaryBin} from '.api/SanitaryBinList';
 
-let binNum = 0;
+let binNum = 0; //should equal corresponding number  in the database
 
-userAddSanitaryBin()
+userAddSanitaryBin() //option to remove bin
 {
     binNum++;
 }
