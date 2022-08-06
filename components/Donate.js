@@ -1,10 +1,14 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+import React from 'react';
+import { Text, View } from 'react-native';
 
-export default function Donate({ navigation }) {
+const Donate = () => {
   return (
-    <View>
-      <Text> Donate Screen</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", fontSize: "150%" }}>
+      <Text>
+        Donate!
+      </Text>
     </View>
   );
 }
+
+export default Donate;
