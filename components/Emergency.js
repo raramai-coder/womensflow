@@ -10,6 +10,7 @@ import {
   Alert,
   FlatList,
 } from "react-native";
+import MapView from "react-native-maps";
 
 import colors from "../config/colors";
 
@@ -66,7 +67,17 @@ export default function Emergency({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.mapView}></View>
+      <View style={styles.mapView}>
+        <MapView
+          style={styles.map}
+          //   initialRegion={{
+          //     latitude: -26.1929,
+          //     longitude: 28.0305,
+          //     // latitudeDelta: 0.0922,
+          //     // longitudeDelta: 0.0421,
+          //   }}
+        />
+      </View>
       <View style={styles.dispensersContainer}>
         <Text style={styles.dispensersHeader}>Dispensers Near Me</Text>
         <Modal
@@ -141,7 +152,12 @@ const styles = StyleSheet.create({
   mapView: {
     height: "50%",
     width: "75%",
-    backgroundColor: colors.black,
+    //backgroundColor: colors.black,
+  },
+
+  map: {
+    width: "100%",
+    height: "100%",
   },
 
   searchButton: {
