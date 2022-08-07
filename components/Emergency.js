@@ -44,8 +44,8 @@ export default function Emergency({ navigation }) {
         <MapView
           style={styles.map}
             initialRegion={{
-              latitude: -26.1929,
-              longitude: 28.0305,
+              latitude: 16.2,
+              longitude: 29.4,
               // latitudeDelta: 0.0922,
               // longitudeDelta: 0.0421,
             }}
