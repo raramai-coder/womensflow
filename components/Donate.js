@@ -1,28 +1,39 @@
 import * as React from "react";
 import { Text, View, StyleSheet, Image, Pressable} from 'react-native';
-import SelectList from 'react-native-dropdown-select-list'
+import SelectList from 'react-native-dropdown-select-list';
+// let dropdownComplete = false;
 
-const Donate = () => {
+
+const Donate = ({navigation}) => {
 
 const [selected, setSelected] = React.useState("");
 
+
 const data = [
-    {key:'1', value:'within 5km'},
-    {key:'2', value:'within 10km'},
-    {key:'3', value:'within 15km'},
-    {key:'4', value:'within 20km'},
+    {key:'1', value:'OLS 3rd Floor Dispenser 0.9km'},
+    {key:'2', value:'WSOA 1st Floor Bathroom 1.2km'},
+    {key:'3', value:'Science Stadium Bathroom 4.7km'},
+    {key:'4', value:'Law Lawns Dispenser 5.2km'},
+    {key:'5', value:'Africa Library Bathroom 10.12km'},
 ]
+
+
 
   return (
     <View>
 
-      <Text style={styles.h1}>Please select the location of the sanitary bin you have added the pads to: </Text>
+      <Text style={styles.h1}>Please select the location of the sanitary bin in which you have donated the pads: </Text>
             {<Image source={require('./MapsImagePlaceHolder.webp')} style={styles.img}/> }
-            <Text style={[styles.h2]}>Recently visited sanitary donation points: </Text>
-            <Text style={[styles.locations]}>- 14 Streatley Avenue, Auckland Park</Text> 
-            <Text style={[styles.h3]}>Sanitary bins: </Text>
-        <SelectList data={data} setSelected={setSelected} placeholder="Choose Distance" maxWidth={50} style={[styles.dropdown]}/>
-        
+            <Text style={[styles.h2]}>Recently visited dispensers: </Text>
+            <Pressable onPress={() => {}} style={[styles.notPress]}>
+            <Text style={[styles.location1]}>WSOA 1st Floor Bathroom</Text> 
+            <Text style={[styles.location2]}>1.2km away</Text> 
+            </Pressable>
+            <Text style={[styles.h2]}>Search for dispenser: </Text>
+        <SelectList data={data} setSelected={setSelected} placeholder="Within Distance" onSelect={() => {}} maxWidth={50} style={[styles.dropdown]}/>
+        <Pressable onPress={() => {navigation.navigate("Donate2")}} style={[styles.canPress]}>
+         <Text style={[styles.location1]}>Next</Text>  
+            </Pressable>
     </View>
   );
 }
@@ -55,11 +66,12 @@ const styles = StyleSheet.create({
       },
 
         h2:{
-            fontSize: 22,
+            fontSize: 25,
             paddingRight: 10,
             paddingLeft:10,
             paddingTop: 10,
             paddingBottom: 10,
+            textAlign: "center",
         },
 
         h3:{
@@ -74,6 +86,18 @@ const styles = StyleSheet.create({
         marginTop: -15,
         width: 10, 
         marginLeft: 20,
+        marginBottom: 10,
+      },
+
+      location1:{
+        marginLeft: 10,
+        fontSize: 15,
+        marginTop: 5,
+        fontWeight: "bold",
+      },
+
+      location2:{
+        marginLeft: 10,
       },
 
       locations:{ //would foreach through all locations in the area that have a sanitation bin
@@ -81,9 +105,33 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         paddingBottom: 5,
         paddingLeft: 10,
-      }
+      },
+
+      filteredLocation:{
+        paddingTop:10,
+        paddingLeft: 10,
+        fontSize: 15,
+      },
+
+      canPress:{
+        backgroundColor: '#78D6B2',
+        borderRadius: 10,
+        padding: 4,
+        marginTop: 10,
+        marginRight: 10,
+        marginLeft: 290,
+      },
+
+      notPress:{
+        backgroundColor: '#578065',
+        borderRadius: 10,
+        padding: 4,
+        marginTop: 5,
+        marginRight: 10,
+        marginLeft: 10,
+      },
   });
 
-  export default Donate;
+
 
   //20
