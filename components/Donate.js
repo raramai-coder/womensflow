@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Text, View, StyleSheet, Image, Pressable} from 'react-native';
 import SelectList from 'react-native-dropdown-select-list';
-// let dropdownComplete = false;
+import MapView from "react-native-maps";
+
 const Donate = ({navigation}) => {
 
 const [selected, setSelected] = React.useState("");
@@ -19,7 +20,18 @@ const data = [
     <View>
 
       <Text style={styles.h1}>Please select the location of the dispensary in which you have donated the pads: </Text>
-            {<Image source={require('./MapsImagePlaceHolder.webp')} style={styles.img}/> }
+            {/* {<Image source={require('./MapsImagePlaceHolder.webp')} style={styles.img}/> } */}
+
+            <MapView
+          style={styles.map}
+            initialRegion={{
+              latitude: -26.1929,
+              longitude: 28.0305,
+              // latitudeDelta: 0.0922,
+              // longitudeDelta: 0.0421,
+            }}
+        />
+
             <Text style={[styles.h2]}>Recently visited dispensers: </Text>
             <Pressable onPress={() => {}} style={[styles.notPress]}>
             <Text style={[styles.location1]}>WSOA 1st Floor Bathroom</Text> 
@@ -36,6 +48,19 @@ const data = [
 
 
 const styles = StyleSheet.create({
+
+  mapView: {
+    height: "50%",
+    width: "75%",
+    //backgroundColor: colors.black,
+  },
+
+  map: {
+    width: 500,
+    height: "20%",
+    marginLeft: -50,
+  },
+  
     h1: {
       fontSize: 20,
       alignItems: "center",
