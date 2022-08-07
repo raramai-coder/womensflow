@@ -13,12 +13,13 @@ export default function Home({ navigation }) {
 
 const styles = StyleSheet.create({
   h1: {
-    fontSize: 55,
+    fontSize: 50,
     textAlign: "center",
     marginTop: -700,
     fontWeight: "bold",
     paddingLeft: 10,
     paddingRight: 10,
+    letterSpacing: 2,
     // textTransform: "uppercase",
   },
 
