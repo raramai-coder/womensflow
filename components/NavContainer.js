@@ -9,6 +9,7 @@ import Donate from "./Donate";
 import FAQ from "./FAQ";
 import Home from "./Home";
 import { ReportStack } from "./StackNav";
+import colors from "../config/colors";
 
 //ScreenNames
 const homeName = "Home";
@@ -41,6 +42,8 @@ export default function NavContainer() {
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
+          tabBarActiveTintColor: colors.primaryButton,
+          tabBarInactiveTintColor: colors.background,
         })}
       >
         <Tab.Screen name={homeName} component={Home} />
@@ -55,7 +58,7 @@ export default function NavContainer() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colors.background,
     alignItems: "center",
     justifyContent: "center",
   },
