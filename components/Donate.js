@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Text, View, StyleSheet, Image, Pressable} from 'react-native';
 import SelectList from 'react-native-dropdown-select-list';
-// let dropdownComplete = false;
-const Donate = () => {
+import MapView from "react-native-maps";
+
+const Donate = ({navigation}) => {
 
 const [selected, setSelected] = React.useState("");
 
@@ -18,21 +19,33 @@ const data = [
   return (
     <View style={styles.container}>
 
-      <Text style={styles.h1}>Please select the location of the sanitary bin in which you have donated the pads: </Text>
-            {<Image source={require('./MapsImagePlaceHolder.webp')} style={styles.img}/> }
+      <Text style={styles.h1}>Please select the location of the dispensary in which you have donated the pads: </Text>
+            {/* {<Image source={require('./MapsImagePlaceHolder.webp')} style={styles.img}/> } */}
+
+            <MapView
+          style={styles.map}
+            initialRegion={{
+              latitude: -26.1929,
+              longitude: 28.0305,
+              // latitudeDelta: 0.0922,
+              // longitudeDelta: 0.0421,
+            }}
+        />
+
             <Text style={[styles.h2]}>Recently visited dispensers: </Text>
             <Pressable onPress={() => {}} style={[styles.notPress]}>
             <Text style={[styles.location1]}>WSOA 1st Floor Bathroom</Text> 
             <Text style={[styles.location2]}>1.2km away</Text> 
             </Pressable>
-            <Text style={[styles.h2]}>Search for dispenser: </Text>
-        <SelectList data={data} setSelected={setSelected} placeholder="Within Distance" onSelect={() => {}} maxWidth={50} style={[styles.dropdown]}/>
-        <Pressable onPress={() => {}} style={[styles.canPress]}>
+            <Text style={[styles.h2]}>Search for dispensary: </Text>
+        <SelectList data={data} setSelected={setSelected} placeholder="Search for dispenser:" onSelect={() => {}} maxWidth={50} style={[styles.dropdown]}/>
+        <Pressable onPress={ () => navigation.navigate("Donate2")} style={[styles.canPress]}>
          <Text style={[styles.location1]}>Next</Text>  
             </Pressable>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -116,7 +129,7 @@ const styles = StyleSheet.create({
       },
 
       canPress:{
-        backgroundColor: '#78D6B2',
+        backgroundColor: '#6B6CA9',
         borderRadius: 10,
         padding: 4,
         marginTop: 10,
@@ -125,7 +138,7 @@ const styles = StyleSheet.create({
       },
 
       notPress:{
-        backgroundColor: '#578065',
+        backgroundColor: '#4152E6',
         borderRadius: 10,
         padding: 4,
         marginTop: 5,

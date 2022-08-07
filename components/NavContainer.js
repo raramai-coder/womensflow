@@ -8,7 +8,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import Donate from "./Donate";
 import FAQ from "./FAQ";
 import Home from "./Home";
-import { ReportStack,HomeStack } from "./StackNav";
+import { ReportStack,HomeStack, DonateStack } from "./StackNav";
 import colors from "../config/colors";
 
 //ScreenNames
@@ -52,7 +52,7 @@ export default function NavContainer() {
         <Tab.Screen name={homeName} component={HomeStack} />
         <Tab.Screen name={FAQName} component={FAQ} />
         <Tab.Screen name={ReportName} component={ReportStack} />
-        <Tab.Screen name={DonateName} component={Donate} />
+        <Tab.Screen name={DonateName} component={DonateStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );
