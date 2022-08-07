@@ -4,6 +4,7 @@ import * as React from "react";
 import Emergency from "./Emergency";
 import EmptyBin from "./EmptyBin";
 import Reports from "./Reports";
+import PadRefillSuccessful from "./PadRefillSuccessful";
 import Donate from "./Donate";
 import Donate2 from "./Donate2";
 import Donate3 from "./Donate3";
@@ -16,6 +17,7 @@ const ReportStack = () => {
       <RStack.Screen name="Reports" component={Reports} />
       <RStack.Screen name="Emergency" component={Emergency} />
       <RStack.Screen name="EmptyBin" component={EmptyBin} />
+      <RStack.Screen name="PadRefillSuccessful" component={PadRefillSuccessful} />
     </RStack.Navigator>
   );
 };

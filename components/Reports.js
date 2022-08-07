@@ -17,7 +17,7 @@ export default function Reports({ navigation }) {
         onPress={() => navigation.navigate("Emergency")}
         style={styles.buttons}
       >
-        <Text style={styles.buttonText}>Emergency Request</Text>
+        <Text style={styles.buttonText}>Search for a dispensary</Text>
       </Pressable>
     </View>
   );
