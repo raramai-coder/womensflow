@@ -6,12 +6,15 @@ import colors from "../config/colors";
 export default function Reports({ navigation }) {
   return (
     <View style={styles.container}>
-      <Pressable onPress={console.log("Pressed report")} style={styles.buttons}>
+      <Pressable
+        onPress={() => navigation.navigate("EmptyBin")}
+        style={styles.buttons}
+      >
         <Text style={styles.buttonText}>Report Empty Bin</Text>
       </Pressable>
 
       <Pressable
-        onPress={console.log("Pressed emergency")}
+        onPress={() => navigation.navigate("Emergency")}
         style={styles.buttons}
       >
         <Text style={styles.buttonText}>Emergency Request</Text>
@@ -23,11 +26,12 @@ export default function Reports({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colors.background,
     alignItems: "center",
     justifyContent: "center",
   },
   buttons: {
+    zIndex: 0.5,
     width: "50%",
     height: "15%",
     padding: 20,

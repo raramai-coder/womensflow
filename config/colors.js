@@ -1,6 +1,8 @@
 export default {
   white: "#FFF",
-  black: "#000",
-  primaryButton: "#d4f3ee",
-  primaryButtonBorder: "#55B7AD",
+  black: "#170204",
+  primaryButton: "#6B6CA9",
+  primaryButtonBorder: "#F4B9B3",
+  background: "#FEC7C3",
+  titleColor: "#2D3991"
 };

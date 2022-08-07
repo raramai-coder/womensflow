@@ -1,33 +1,15 @@
-import * as React from "react";
-import { Text, View, StyleSheet } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
+import colors from '../config/colors';
 
 const Donate = () => {
   return (
-    <View style={styles.body}>
-      {/* <Image source={require('./MapsImagePlaceHolder.webp')} />  */}
-      <Text style={styles.body}>Please select the location of the sanitary bin you have added the pads to</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: colors.background, fontSize: "150%" }}>
+      <Text>
+        Donate!
+      </Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-    // h1: {
-    //   flex: 1,
-    //   fontSize: 80,
-    //   alignItems: "center",
-    //   justifyContent: "center",
-    //   fontWeight: "bold",
-    // },
-
-    body: {
-        flex: 1,
-        fontSize: 20,
-        alignItems: "center",
-        justifyContent: "center",
-        paddingRight: 5,
-        paddingLeft:5,
-        paddingTop: 10,
-      },
-  });
-
-  export default Donate;
+export default Donate;

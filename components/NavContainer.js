@@ -1,7 +1,6 @@
 import * as React from "react";
 import { View, Text, StyleSheet } from "react-native";
-//import { NavigationContainer } from "react-navigation";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -9,7 +8,8 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import Donate from "./Donate";
 import FAQ from "./FAQ";
 import Home from "./Home";
-import Reports from "./Reports";
+import { ReportStack } from "./StackNav";
+import colors from "../config/colors";
 
 //ScreenNames
 const homeName = "Home";
@@ -42,11 +42,13 @@ export default function NavContainer() {
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
+          tabBarActiveTintColor: colors.primaryButton,
+          tabBarInactiveTintColor: colors.background,
         })}
       >
         <Tab.Screen name={homeName} component={Home} />
         <Tab.Screen name={FAQName} component={FAQ} />
-        <Tab.Screen name={ReportName} component={Reports} />
+        <Tab.Screen name={ReportName} component={ReportStack} />
         <Tab.Screen name={DonateName} component={Donate} />
       </Tab.Navigator>
     </NavigationContainer>
@@ -56,7 +58,7 @@ export default function NavContainer() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colors.background,
     alignItems: "center",
     justifyContent: "center",
   },
