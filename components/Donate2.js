@@ -6,7 +6,7 @@ const Donate2 = () => {
         const [text, onChangeText] = React.useState("Number of  pads");
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.h1}>How many pads did you donate?</Text>
       <TextInput
         style={styles.input}
@@ -20,6 +20,12 @@ const Donate2 = () => {
 export default Donate2;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FEC7C3",
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
     h1: {
       flex: 1,
       fontSize: "150%",

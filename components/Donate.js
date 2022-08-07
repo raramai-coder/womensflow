@@ -16,7 +16,7 @@ const data = [
 ]
 
   return (
-    <View>
+    <View style={styles.container}>
 
       <Text style={styles.h1}>Please select the location of the sanitary bin in which you have donated the pads: </Text>
             {<Image source={require('./MapsImagePlaceHolder.webp')} style={styles.img}/> }
@@ -35,6 +35,12 @@ const data = [
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FEC7C3",
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
     h1: {
       fontSize: 20,
       alignItems: "center",
