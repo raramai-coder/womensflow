@@ -6,6 +6,7 @@ import EmptyBin from "./EmptyBin";
 import Reports from "./Reports";
 import Donate from "./Donate";
 import Donate2 from "./Donate2";
+import Donate3 from "./Donate3";
 
 const RStack = createStackNavigator();
 
@@ -28,6 +29,7 @@ const DonateStack = () => {
     <DStack.Navigator>
       <DStack.Screen name="Donate" component={Donate} />
       <DStack.Screen name="Donate2" component={Donate2} />
+      <DStack.Screen name="Donate3" component={Donate3} />
     </DStack.Navigator>
   );
 };

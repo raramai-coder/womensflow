@@ -26,7 +26,7 @@ const data = [
             <Text style={[styles.location2]}>1.2km away</Text> 
             </Pressable>
             <Text style={[styles.h2]}>Search for dispenser: </Text>
-        <SelectList data={data} setSelected={setSelected} placeholder="Within Distance" onSelect={() => {}} maxWidth={50} style={[styles.dropdown]}/>
+        <SelectList data={data} setSelected={setSelected} placeholder="Search for dispenser:" onSelect={() => {}} maxWidth={50} style={[styles.dropdown]}/>
         <Pressable onPress={ () => navigation.navigate("Donate2")} style={[styles.canPress]}>
          <Text style={[styles.location1]}>Next</Text>  
             </Pressable>
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
       },
 
       canPress:{
-        backgroundColor: '#78D6B2',
+        backgroundColor: '#6B6CA9',
         borderRadius: 10,
         padding: 4,
         marginTop: 10,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
       },
 
       notPress:{
-        backgroundColor: '#578065',
+        backgroundColor: '#4152E6',
         borderRadius: 10,
         padding: 4,
         marginTop: 5,
