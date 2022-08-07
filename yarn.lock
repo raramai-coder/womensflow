@@ -6167,6 +6167,11 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
+"react-native-dropdown-select-list@^1.0.18":
+  "integrity" "sha512-GJBjyxjRw/MGMZAGlONziRkUPKPB5gO/4vBgf9fnsUxNI/ATo6fwfGw187GNSwe8LHjie87wAu6/35iwz6fOdA=="
+  "resolved" "https://registry.npmjs.org/react-native-dropdown-select-list/-/react-native-dropdown-select-list-1.0.18.tgz"
+  "version" "1.0.18"
+
 "react-native-firebase@^5.6.0":
   "integrity" "sha512-I+o3zNLdIz4pxWTCSZH70M1BcPl+SdqKQfurOT0sWcaMSL2ecDqVy0PCTmN7ORt7/Z879Er6PLgA/psjArQlmw=="
   "resolved" "https://registry.npmjs.org/react-native-firebase/-/react-native-firebase-5.6.0.tgz"

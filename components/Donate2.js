@@ -6,9 +6,8 @@ const Donate2 = () => {
         const [text, onChangeText] = React.useState("Number of  pads");
 
   return (
-    <View style={styles.h1}>
-      <Text>Donate!</Text>
-      <Text style={styles.body}>How many pads did you donate?</Text>
+    <View>
+      <Text style={styles.h1}>How many pads did you donate?</Text>
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}
