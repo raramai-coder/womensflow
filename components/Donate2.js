@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TextInput} from 'react-native';
+import { Text, View, TextInput, StyleSheet} from 'react-native';
 
 const Donate2 = () => {
 
