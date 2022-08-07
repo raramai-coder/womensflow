@@ -2,9 +2,7 @@ import * as React from "react";
 import { Text, View, StyleSheet, Image, Pressable} from 'react-native';
 import SelectList from 'react-native-dropdown-select-list';
 // let dropdownComplete = false;
-
-
-const Donate = ({navigation}) => {
+const Donate = () => {
 
 const [selected, setSelected] = React.useState("");
 
@@ -31,7 +29,7 @@ const data = [
             </Pressable>
             <Text style={[styles.h2]}>Search for dispenser: </Text>
         <SelectList data={data} setSelected={setSelected} placeholder="Within Distance" onSelect={() => {}} maxWidth={50} style={[styles.dropdown]}/>
-        <Pressable onPress={() => {navigation.navigate("Donate2")}} style={[styles.canPress]}>
+        <Pressable onPress={() => {}} style={[styles.canPress]}>
          <Text style={[styles.location1]}>Next</Text>  
             </Pressable>
     </View>
@@ -132,6 +130,6 @@ const styles = StyleSheet.create({
       },
   });
 
-
+  export default Donate;
 
   //20
