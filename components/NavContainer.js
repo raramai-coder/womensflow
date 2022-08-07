@@ -8,7 +8,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import Donate from "./Donate";
 import FAQ from "./FAQ";
 import Home from "./Home";
-import { ReportStack , DonateStack} from "./StackNav";
+import { ReportStack, DonateStack } from "./StackNav";
 import colors from "../config/colors";
 
 //ScreenNames
@@ -44,6 +44,7 @@ export default function NavContainer() {
           },
           tabBarActiveTintColor: colors.primaryButton,
           tabBarInactiveTintColor: colors.background,
+          headerShown: false,
         })}
       >
         <Tab.Screen name={homeName} component={Home} />

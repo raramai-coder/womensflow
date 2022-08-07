@@ -1,18 +1,18 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Image, } from "react-native";
+import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
 export default function Home({ navigation }) {
   return (
-    <View>
-     
-      {<Image source={require('./womansflowLogo.png')} style={styles.img}/> }
+    <SafeAreaView>
+      {<Image source={require("./womansflowLogo.png")} style={styles.img} />}
       <Text style={[styles.h1]}>Welcome to womansflow!</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  h1:{
+  h1: {
     fontSize: 55,
     textAlign: "center",
     marginTop: -700,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     // textTransform: "uppercase",
   },
 
-  img:{
+  img: {
     width: 500,
     marginTop: 100,
     opacity: 0.5,
